@@ -9,8 +9,10 @@ namespace PROJECT.Data
         public int appliance_id { get; set; }
         [ForeignKey("ApplianceType")]
         public int type_id { get; set; }
+        public ApplianceType ApplianceType { get; set; }
         [ForeignKey("Home")]
         public int home_id { get; set; }
+        public Home Home {  get; set; }
         public string model { get; set; }
         public string name { get; set; }
         public string device_identifier { get; set; }

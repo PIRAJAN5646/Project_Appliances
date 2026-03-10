@@ -7,6 +7,7 @@ namespace PROJECT.Data
     {
         [ForeignKey("User")]
         public int user_id { get; set; }
+        public User User { get; set; }
         [Key]
         public int home_id { get; set; }
         [Required]

@@ -10,9 +10,7 @@ namespace PROJECT.Data
         public string name { get; set; }
         [Required]
         public string category { get; set; }
-        [Required]
         public double avg_energy_rating { get; set; }
-        [Required]
         public double avg_water_rating { get;set; }
     }
 }

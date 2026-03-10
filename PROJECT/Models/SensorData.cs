@@ -7,7 +7,7 @@ namespace PROJECT.Data
     {
         [Key]
         public int Sensor_id { get; set; }
-        [ForeignKey("Appliances")]
+        [ForeignKey("Appliance")]
         public int appliance_id { get; set; }
         public DateTime timestramp { get; set; }= DateTime.Now;
         public string reading_type { get; set; }

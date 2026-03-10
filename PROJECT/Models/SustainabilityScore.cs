@@ -5,8 +5,9 @@ namespace PROJECT.Data
 {
     public class SustainabilityScore
     {
-        [ForeignKey("Homes")]
+        [ForeignKey("Home")]
         public int home_id { get; set; }
+        public Home Home { get; set; }
         [Key]
         public int sustainablity_score_id { get; set; }
         public DateTime period_start { get; set; }
