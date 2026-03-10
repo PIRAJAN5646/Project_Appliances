@@ -16,4 +16,13 @@ namespace PROJECT.Data
         public double overall_score { get; set; }
 
     }
+
+
+
+
+
+
+
+
+
 }

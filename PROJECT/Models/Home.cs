@@ -3,9 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PROJECT.Data
 {
-    public class Homes
+    public class Home
     {
-        [ForeignKey("Users")]
+        [ForeignKey("User")]
         public int user_id { get; set; }
         [Key]
         public int home_id { get; set; }
