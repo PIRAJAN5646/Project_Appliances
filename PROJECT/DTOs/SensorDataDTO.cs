@@ -8,6 +8,6 @@
 
         public double value { get; set; }
 
-        public int unit { get; set; }
+        public String unit { get; set; }
     }
 }

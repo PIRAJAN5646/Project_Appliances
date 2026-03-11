@@ -1381,8 +1381,8 @@
             "nullable": true
           },
           "unit": {
-            "type": "integer",
-            "format": "int32"
+            "type": "string",
+            "nullable": true
           },
           "value": {
             "type": "number",
@@ -1407,8 +1407,8 @@
             "format": "double"
           },
           "unit": {
-            "type": "integer",
-            "format": "int32"
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

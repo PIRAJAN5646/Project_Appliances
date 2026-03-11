@@ -11,7 +11,7 @@ namespace PROJECT.Data
         public int appliance_id { get; set; }
         public DateTime timestramp { get; set; }= DateTime.Now;
         public string reading_type { get; set; }
-        public int unit {  get; set; }
+        public String unit {  get; set; }
         public double value { get; set; }
     }
 }

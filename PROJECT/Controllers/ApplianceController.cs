@@ -42,6 +42,7 @@ namespace PROJECT.Controllers
                 type_id = dto.type_id,
                 name = dto.name,
                 model = dto.model,
+                status="Active",
                 device_identifier = dto.device_identifier
             };
 
