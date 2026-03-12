@@ -159,4 +159,3 @@ D:\TRAINING\C#\Project\PROJECT\obj\Debug\net10.0\refint\PROJECT.dll
 D:\TRAINING\C#\Project\PROJECT\obj\Debug\net10.0\PROJECT.pdb
 D:\TRAINING\C#\Project\PROJECT\obj\Debug\net10.0\PROJECT.genruntimeconfig.cache
 D:\TRAINING\C#\Project\PROJECT\obj\Debug\net10.0\ref\PROJECT.dll
-D:\TRAINING\C#\Project\PROJECT\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
