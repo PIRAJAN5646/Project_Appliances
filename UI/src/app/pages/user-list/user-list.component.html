@@ -1,0 +1,28 @@
+<div class="page-header">
+  <div>
+    <h2>User Management</h2>
+    <p>View and manage all registered eco-home users.</p>
+  </div>
+  <button class="btn btn-primary">+ Add User</button>
+</div>
+
+<div class="users-grid" *ngIf="!isLoading">
+  <div class="user-card glass-panel fade-in" *ngFor="let user of users; let i = index" [style.animationDelay]="i * 0.1 + 's'">
+    <div class="user-avatar">{{ user.name ? user.name.charAt(0) : 'U' | uppercase }}</div>
+    <div class="user-info">
+      <h3>{{ user.name }}</h3>
+      <p>{{ user.email }}</p>
+      <div class="user-meta">
+        <span class="badge">ID: {{ user.user_id }}</span>
+        <span class="date">{{ user.created_at | date:'shortDate' }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="isLoading" class="loading-state glass-panel">
+  Loading users...
+</div>
+<div *ngIf="!isLoading && users.length === 0" class="loading-state glass-panel">
+  No users found.
+</div>

@@ -1,0 +1,124 @@
+.page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+.header-titles h1 { font-size: 2rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.25rem; }
+.subtitle { color: var(--text-secondary); font-size: 0.95rem; }
+.table-card { padding: 0; overflow: hidden; }
+
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.25rem 1.5rem;
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.filter-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filter-select {
+  background-color: var(--bg-input);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.filter-select:focus {
+  border-color: #fce205;
+}
+
+.filter-select option {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.filter-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.filter-indicator.green { background-color: #10b981; box-shadow: 0 0 8px rgba(16, 185, 129, 0.5); }
+.filter-indicator.yellow { background-color: #f59e0b; box-shadow: 0 0 8px rgba(245, 158, 11, 0.5); }
+.filter-indicator.red { background-color: #ef4444; box-shadow: 0 0 8px rgba(239, 68, 68, 0.5); }
+.filter-indicator.neutral { background-color: var(--text-secondary); }
+
+.filter-count {
+  margin-left: auto;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Severity Badges */
+.severity-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.severity-badge .sev-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.severity-badge .sev-value {
+  font-weight: 400;
+  opacity: 0.7;
+  font-size: 0.75rem;
+}
+
+.sev-critical { background-color: rgba(239, 68, 68, 0.15); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3); }
+.sev-critical .sev-dot { background-color: #ef4444; box-shadow: 0 0 6px rgba(239, 68, 68, 0.6); }
+
+.sev-warning { background-color: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); }
+.sev-warning .sev-dot { background-color: #f59e0b; box-shadow: 0 0 6px rgba(245, 158, 11, 0.6); }
+
+.sev-info { background-color: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); }
+.sev-info .sev-dot { background-color: #10b981; box-shadow: 0 0 6px rgba(16, 185, 129, 0.6); }
+
+/* Resolved Badges */
+.resolved-badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.resolved-yes {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.resolved-no {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}

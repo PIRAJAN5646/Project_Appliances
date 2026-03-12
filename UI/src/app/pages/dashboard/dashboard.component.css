@@ -1,0 +1,239 @@
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2.25rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.btn-primary.add-btn {
+  background-color: #fce205; /* Batman Yellow */
+  color: black;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+}
+
+.btn-primary.add-btn:hover {
+  background-color: #e5cc00;
+}
+
+/* Metrics Grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.metric-card {
+  background-color: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  border-left: 4px solid transparent;
+  transition: transform 0.2s;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+}
+
+.metric-card.highlight {
+  border-left-color: #fce205;
+}
+
+.metric-card.warning {
+  border-left-color: #ef4444;
+}
+
+.metric-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: var(--bg-sidebar);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+
+.metric-icon.bg-yellow {
+  background-color: #fce205;
+}
+.metric-icon.bg-red {
+  background-color: #ef4444;
+}
+
+.metric-info h3 {
+  font-size: 1.75rem;
+  margin-bottom: 0.1rem;
+}
+.metric-info .text-yellow { color: #fce205; }
+.metric-info .text-red { color: #ef4444; }
+
+.metric-info span {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Content Grid */
+.dashboard-content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  height: 400px;
+}
+
+/* Map / Main Panel */
+.map-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-header h2 {
+  font-size: 1.25rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-pill);
+}
+.btn-secondary:hover { background-color: rgba(255,255,255,0.05); }
+
+.map-placeholder {
+  flex: 1;
+  background-color: var(--bg-app);
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--border-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.radar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid rgba(252, 226, 5, 0.2);
+  margin-bottom: 1rem;
+  position: relative;
+}
+.radar::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 1px;
+  background-color: rgba(252, 226, 5, 0.5);
+  transform-origin: left center;
+  animation: radar-spin 3s linear infinite;
+}
+
+@keyframes radar-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Activity Panel */
+.activity-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  flex: 1;
+}
+
+.activity-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.act-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-top: 5px;
+}
+
+.act-indicator.added { background-color: #10b981; }
+.act-indicator.offline { background-color: #ef4444; }
+.act-indicator.user { background-color: #3b82f6; }
+
+.act-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.act-name {
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.act-meta {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.view-all-container {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.full-width {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-content-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .map-placeholder {
+    height: 300px;
+  }
+}

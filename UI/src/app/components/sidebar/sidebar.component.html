@@ -1,0 +1,25 @@
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="logo-icon bg-yellow">
+      <svg width="36" height="20" viewBox="0 0 512 260" fill="black" xmlns="http://www.w3.org/2000/svg">
+        <path d="M256 0C246 30 220 58 200 72C188 56 170 40 156 34C160 52 158 72 148 86C122 62 90 36 48 20C60 46 60 76 50 100C34 82 16 68 0 60C24 96 36 140 50 168C68 202 98 230 140 248C172 260 210 260 256 260C302 260 340 260 372 248C414 230 444 202 462 168C476 140 488 96 512 60C496 68 478 82 462 100C452 76 452 46 464 20C422 36 390 62 364 86C354 72 352 52 356 34C342 40 324 56 312 72C292 58 266 30 256 0Z"/>
+      </svg>
+    </div>
+    <span class="logo-text">Appliance Mgr</span>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-btn">Dashboard</a>
+    <a routerLink="/appliances" routerLinkActive="active" class="nav-btn">Appliances</a>
+    <a routerLink="/analytics" routerLinkActive="active" class="nav-btn">Usage Analytics</a>
+    <a routerLink="/users" routerLinkActive="active" class="nav-btn">Users</a>
+    <a routerLink="/homes" routerLinkActive="active" class="nav-btn">Homes</a>
+    <a routerLink="/alerts" routerLinkActive="active" class="nav-btn">Alerts</a>
+    <a routerLink="/sensors" routerLinkActive="active" class="nav-btn">Sensors</a>
+    <a routerLink="/notifications" routerLinkActive="active" class="nav-btn">Notifications</a>
+  </nav>
+
+  <div class="sidebar-footer">
+    <button class="nav-btn btn-logout">Log Out</button>
+  </div>
+</aside>

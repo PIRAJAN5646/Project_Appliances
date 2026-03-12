@@ -1,0 +1,214 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\TRAINING\\C#\\Project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|PROJECT\\PROJECT.csproj|d:\\training\\c#\\project\\project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|PROJECT\\PROJECT.csproj|solutionrelative:project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|PROJECT\\PROJECT.csproj|d:\\training\\c#\\project\\project\\controllers\\sensordatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|PROJECT\\PROJECT.csproj|solutionrelative:project\\controllers\\sensordatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|PROJECT\\PROJECT.csproj|d:\\training\\c#\\project\\project\\models\\sensordata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|PROJECT\\PROJECT.csproj|solutionrelative:project\\models\\sensordata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|PROJECT\\PROJECT.csproj|d:\\training\\c#\\project\\project\\dtos\\sensordatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|PROJECT\\PROJECT.csproj|solutionrelative:project\\dtos\\sensordatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|PROJECT\\PROJECT.csproj|d:\\training\\c#\\project\\project\\controllers\\appliancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|PROJECT\\PROJECT.csproj|solutionrelative:project\\controllers\\appliancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|PROJECT\\PROJECT.csproj|d:\\training\\c#\\project\\project\\dtos\\appliancetypedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|PROJECT\\PROJECT.csproj|solutionrelative:project\\dtos\\appliancetypedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|PROJECT\\PROJECT.csproj|d:\\training\\c#\\project\\project\\controllers\\appliancetypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|PROJECT\\PROJECT.csproj|solutionrelative:project\\controllers\\appliancetypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|PROJECT\\PROJECT.csproj|d:\\training\\c#\\project\\project\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|PROJECT\\PROJECT.csproj|solutionrelative:project\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|PROJECT\\PROJECT.csproj|d:\\training\\c#\\project\\project\\controllers\\alertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|PROJECT\\PROJECT.csproj|solutionrelative:project\\controllers\\alertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|PROJECT\\PROJECT.csproj|d:\\training\\c#\\project\\project\\controllers\\energyusagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|PROJECT\\PROJECT.csproj|solutionrelative:project\\controllers\\energyusagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|PROJECT\\PROJECT.csproj|d:\\training\\c#\\project\\project\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|PROJECT\\PROJECT.csproj|solutionrelative:project\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|PROJECT\\PROJECT.csproj|d:\\training\\c#\\project\\project\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|PROJECT\\PROJECT.csproj|solutionrelative:project\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SensorDataDTO.cs",
+              "DocumentMoniker": "D:\\TRAINING\\C#\\Project\\PROJECT\\DTOs\\SensorDataDTO.cs",
+              "RelativeDocumentMoniker": "PROJECT\\DTOs\\SensorDataDTO.cs",
+              "ToolTip": "D:\\TRAINING\\C#\\Project\\PROJECT\\DTOs\\SensorDataDTO.cs",
+              "RelativeToolTip": "PROJECT\\DTOs\\SensorDataDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T04:06:45.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SensorData.cs",
+              "DocumentMoniker": "D:\\TRAINING\\C#\\Project\\PROJECT\\Models\\SensorData.cs",
+              "RelativeDocumentMoniker": "PROJECT\\Models\\SensorData.cs",
+              "ToolTip": "D:\\TRAINING\\C#\\Project\\PROJECT\\Models\\SensorData.cs",
+              "RelativeToolTip": "PROJECT\\Models\\SensorData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T04:06:30.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ApplianceTypeDTO.cs",
+              "DocumentMoniker": "D:\\TRAINING\\C#\\Project\\PROJECT\\DTOs\\ApplianceTypeDTO.cs",
+              "RelativeDocumentMoniker": "PROJECT\\DTOs\\ApplianceTypeDTO.cs",
+              "ToolTip": "D:\\TRAINING\\C#\\Project\\PROJECT\\DTOs\\ApplianceTypeDTO.cs",
+              "RelativeToolTip": "PROJECT\\DTOs\\ApplianceTypeDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T03:43:44.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\TRAINING\\C#\\Project\\PROJECT\\Program.cs",
+              "RelativeDocumentMoniker": "PROJECT\\Program.cs",
+              "ToolTip": "D:\\TRAINING\\C#\\Project\\PROJECT\\Program.cs",
+              "RelativeToolTip": "PROJECT\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T14:09:12.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AlertController.cs",
+              "DocumentMoniker": "D:\\TRAINING\\C#\\Project\\PROJECT\\Controllers\\AlertController.cs",
+              "RelativeDocumentMoniker": "PROJECT\\Controllers\\AlertController.cs",
+              "ToolTip": "D:\\TRAINING\\C#\\Project\\PROJECT\\Controllers\\AlertController.cs",
+              "RelativeToolTip": "PROJECT\\Controllers\\AlertController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T14:06:54.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SensorDataController.cs",
+              "DocumentMoniker": "D:\\TRAINING\\C#\\Project\\PROJECT\\Controllers\\SensorDataController.cs",
+              "RelativeDocumentMoniker": "PROJECT\\Controllers\\SensorDataController.cs",
+              "ToolTip": "D:\\TRAINING\\C#\\Project\\PROJECT\\Controllers\\SensorDataController.cs",
+              "RelativeToolTip": "PROJECT\\Controllers\\SensorDataController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T14:06:01.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EnergyUsageController.cs",
+              "DocumentMoniker": "D:\\TRAINING\\C#\\Project\\PROJECT\\Controllers\\EnergyUsageController.cs",
+              "RelativeDocumentMoniker": "PROJECT\\Controllers\\EnergyUsageController.cs",
+              "ToolTip": "D:\\TRAINING\\C#\\Project\\PROJECT\\Controllers\\EnergyUsageController.cs",
+              "RelativeToolTip": "PROJECT\\Controllers\\EnergyUsageController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T14:04:27.66Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApplianceTypeController.cs",
+              "DocumentMoniker": "D:\\TRAINING\\C#\\Project\\PROJECT\\Controllers\\ApplianceTypeController.cs",
+              "RelativeDocumentMoniker": "PROJECT\\Controllers\\ApplianceTypeController.cs",
+              "ToolTip": "D:\\TRAINING\\C#\\Project\\PROJECT\\Controllers\\ApplianceTypeController.cs",
+              "RelativeToolTip": "PROJECT\\Controllers\\ApplianceTypeController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAywBUAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T14:03:19.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplianceController.cs",
+              "DocumentMoniker": "D:\\TRAINING\\C#\\Project\\PROJECT\\Controllers\\ApplianceController.cs",
+              "RelativeDocumentMoniker": "PROJECT\\Controllers\\ApplianceController.cs",
+              "ToolTip": "D:\\TRAINING\\C#\\Project\\PROJECT\\Controllers\\ApplianceController.cs",
+              "RelativeToolTip": "PROJECT\\Controllers\\ApplianceController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAACwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T14:02:38.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\TRAINING\\C#\\Project\\PROJECT\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "PROJECT\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\TRAINING\\C#\\Project\\PROJECT\\Controllers\\UserController.cs",
+              "RelativeToolTip": "PROJECT\\Controllers\\UserController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAcwAIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T13:46:34.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\TRAINING\\C#\\Project\\PROJECT\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "PROJECT\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\TRAINING\\C#\\Project\\PROJECT\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "PROJECT\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAIwAIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T13:45:27.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "NotificationController.cs",
+              "DocumentMoniker": "D:\\TRAINING\\C#\\Project\\PROJECT\\Controllers\\NotificationController.cs",
+              "RelativeDocumentMoniker": "PROJECT\\Controllers\\NotificationController.cs",
+              "ToolTip": "D:\\TRAINING\\C#\\Project\\PROJECT\\Controllers\\NotificationController.cs",
+              "RelativeToolTip": "PROJECT\\Controllers\\NotificationController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAADwvyIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T13:44:22.004Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

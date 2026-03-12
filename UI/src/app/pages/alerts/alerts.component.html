@@ -1,0 +1,90 @@
+<div class="page-header">
+  <div class="header-titles">
+    <h1>Alerts</h1>
+    <p class="subtitle">Appliance alerts and warnings by severity.</p>
+  </div>
+</div>
+
+<!-- Filter Bar -->
+<div class="filter-bar">
+  <div class="filter-group">
+    <label>Resolved</label>
+    <select class="filter-select" [(ngModel)]="filterResolved" (ngModelChange)="applyFilters()">
+      <option value="all">All</option>
+      <option value="yes">✅ Yes (Resolved)</option>
+      <option value="no">❌ No (Unresolved)</option>
+    </select>
+    <span class="filter-indicator"
+          [class.green]="filterResolved === 'yes'"
+          [class.red]="filterResolved === 'no'"
+          [class.neutral]="filterResolved === 'all'">
+    </span>
+  </div>
+
+  <div class="filter-group">
+    <label>Severity</label>
+    <select class="filter-select" [(ngModel)]="filterSeverity" (ngModelChange)="applyFilters()">
+      <option value="all">All Levels</option>
+      <option value="critical">🔴 Critical (8+)</option>
+      <option value="warning">🟡 Warning (5-7)</option>
+      <option value="info">🟢 Info (&lt;5)</option>
+    </select>
+    <span class="filter-indicator"
+          [class.red]="filterSeverity === 'critical'"
+          [class.yellow]="filterSeverity === 'warning'"
+          [class.green]="filterSeverity === 'info'"
+          [class.neutral]="filterSeverity === 'all'">
+    </span>
+  </div>
+
+  <span class="filter-count">Showing {{ filteredAlerts.length }} of {{ alerts.length }}</span>
+</div>
+
+<div class="error-banner" *ngIf="error"><p>⚠ {{ error }}</p></div>
+<div class="loading" *ngIf="loading"><p>Loading alerts...</p></div>
+
+<div class="card-panel table-card" *ngIf="!loading && filteredAlerts.length > 0">
+  <div class="table-responsive">
+    <table class="batman-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Appliance</th>
+          <th>Type</th>
+          <th>Message</th>
+          <th>Severity</th>
+          <th>Resolved</th>
+          <th>Created</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let a of filteredAlerts">
+          <td class="text-secondary">#{{ a.alert_id }}</td>
+          <td>#{{ a.appliance_id }}</td>
+          <td class="font-medium">{{ a.alert_type }}</td>
+          <td>{{ a.message }}</td>
+          <td>
+            <span class="severity-badge"
+                  [class.sev-critical]="a.severity >= 8"
+                  [class.sev-warning]="a.severity >= 5 && a.severity < 8"
+                  [class.sev-info]="a.severity < 5">
+              <span class="sev-dot"></span>
+              {{ a.severity >= 8 ? 'Critical' : a.severity >= 5 ? 'Warning' : 'Info' }}
+              <span class="sev-value">({{ a.severity }})</span>
+            </span>
+          </td>
+          <td>
+            <span class="resolved-badge" [class.resolved-yes]="a.is_resolved" [class.resolved-no]="!a.is_resolved">
+              {{ a.is_resolved ? '✔ Yes' : '✘ No' }}
+            </span>
+          </td>
+          <td class="text-secondary">{{ a.created_at | date:'short' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="empty-state" *ngIf="!loading && filteredAlerts.length === 0 && !error">
+  <p>No alerts match the selected filters.</p>
+</div>

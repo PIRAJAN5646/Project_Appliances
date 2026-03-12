@@ -1,0 +1,56 @@
+<div class="page-header">
+  <div class="header-titles">
+    <h1>Appliance Management</h1>
+    <p class="subtitle">View and manage all registered appliances.</p>
+  </div>
+</div>
+
+<!-- Error Banner -->
+<div class="error-banner" *ngIf="error">
+  <p>⚠ {{ error }}</p>
+</div>
+
+<!-- Loading -->
+<div class="loading" *ngIf="loading">
+  <p>Loading appliances...</p>
+</div>
+
+<div class="card-panel table-card" *ngIf="!loading && appliances.length > 0">
+  <div class="table-responsive">
+    <table class="batman-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Device Name</th>
+          <th>Model</th>
+          <th>Device Identifier</th>
+          <th>Status</th>
+          <th class="text-right">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let app of appliances">
+          <td class="text-secondary">#{{ app.appliance_id }}</td>
+          <td class="font-medium">{{ app.name }}</td>
+          <td>{{ app.model }}</td>
+          <td class="text-secondary">{{ app.device_identifier }}</td>
+          <td>
+            <div class="status-indicator">
+              <span class="dot" [class.online]="app.status === 'Active'" [class.offline]="app.status !== 'Active'"></span>
+              {{ app.status }}
+            </div>
+          </td>
+          <td class="text-right">
+            <button class="btn btn-icon danger" title="Delete" (click)="deleteAppliance(app.appliance_id)">
+               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="empty-state" *ngIf="!loading && appliances.length === 0 && !error">
+  <p>No appliances found. Register one via the API.</p>
+</div>

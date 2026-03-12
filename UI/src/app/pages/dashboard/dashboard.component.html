@@ -1,0 +1,116 @@
+<div class="dashboard-header">
+  <div class="header-titles">
+    <h1>Dashboard</h1>
+    <p class="subtitle">System Overview</p>
+  </div>
+</div>
+
+<!-- Error Banner -->
+<div class="error-banner" *ngIf="error">
+  <p>⚠ {{ error }}</p>
+</div>
+
+<!-- Key Metrics Row -->
+<div class="metrics-grid">
+  <div class="metric-card">
+    <div class="metric-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M4 6H20V18H4V6ZM2 6C2 4.89543 2.89543 4 4 4H20C21.1046 4 22 4.89543 22 6V18C22 19.1046 21.1046 20 20 20H4C2.89543 20 2 19.1046 2 18V6Z"/>
+      </svg>
+    </div>
+    <div class="metric-info">
+      <h3>{{ totalAppliances }}</h3>
+      <span>Total Appliances</span>
+    </div>
+  </div>
+
+  <div class="metric-card highlight">
+    <div class="metric-icon bg-yellow">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="black">
+        <path d="M11 2L2 12H11V22L20 12H11V2Z"/>
+      </svg>
+    </div>
+    <div class="metric-info">
+      <h3 class="text-yellow">{{ activeAppliances }}</h3>
+      <span>Active Devices</span>
+    </div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 14C15.3137 14 18 11.3137 18 8C18 4.68629 15.3137 2 12 2C8.68629 2 6 4.68629 6 8C6 11.3137 8.68629 14 12 14ZM4 22H20C20 18.6863 17.3137 16 14 16H10C6.68629 16 4 18.6863 4 22Z"/>
+      </svg>
+    </div>
+    <div class="metric-info">
+      <h3>{{ totalUsers }}</h3>
+      <span>Registered Users</span>
+    </div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 3L2 12H5V20H19V12H22L12 3ZM10 18V14H14V18H10Z"/>
+      </svg>
+    </div>
+    <div class="metric-info">
+      <h3>{{ totalAppliances - activeAppliances }}</h3>
+      <span>Inactive Devices</span>
+    </div>
+  </div>
+</div>
+
+<div class="dashboard-content-grid">
+  <!-- Left Side: Appliances Quick View -->
+  <div class="card-panel">
+    <div class="card-header">
+      <h2>Recent Appliances</h2>
+    </div>
+    <div class="table-responsive" *ngIf="appliances.length > 0; else noAppliances">
+      <table class="batman-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Model</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let app of appliances.slice(0, 5)">
+            <td class="text-secondary">#{{ app.appliance_id }}</td>
+            <td class="font-medium">{{ app.name }}</td>
+            <td>{{ app.model }}</td>
+            <td>
+              <div class="status-indicator">
+                <span class="dot" [class.online]="app.status === 'Active'" [class.offline]="app.status !== 'Active'"></span>
+                {{ app.status }}
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <ng-template #noAppliances>
+      <p class="empty-state">No appliances registered yet. Add one via the API or the Appliances page.</p>
+    </ng-template>
+  </div>
+
+  <!-- Right Side: Recent Users -->
+  <div class="card-panel">
+    <h2>Recent Users</h2>
+    <div class="activity-list" *ngIf="recentUsers.length > 0; else noUsers">
+      <div class="activity-item" *ngFor="let user of recentUsers">
+        <div class="act-indicator added"></div>
+        <div class="act-details">
+          <span class="act-name">{{ user.name }}</span>
+          <span class="act-meta">{{ user.email }}</span>
+        </div>
+      </div>
+    </div>
+    <ng-template #noUsers>
+      <p class="empty-state">No users registered yet.</p>
+    </ng-template>
+  </div>
+</div>

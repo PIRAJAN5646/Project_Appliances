@@ -1,0 +1,44 @@
+/* Appliance List Header */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header-titles h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.search-input {
+  width: 250px;
+}
+
+.btn-primary.add-btn {
+  background-color: #fce205;
+  color: black;
+  font-weight: 700;
+}
+
+.btn-primary.add-btn:hover {
+  background-color: #e5cc00;
+}
+
+/* Page Card */
+.table-card {
+  padding: 0;
+  overflow: hidden;
+}

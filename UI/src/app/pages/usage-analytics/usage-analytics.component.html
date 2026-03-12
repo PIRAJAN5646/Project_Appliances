@@ -1,0 +1,117 @@
+<div class="page-header">
+  <div class="header-titles">
+    <h1>Usage Analytics</h1>
+    <p class="subtitle">Energy &amp; Water consumption overview.</p>
+  </div>
+</div>
+
+<div class="error-banner" *ngIf="error"><p>⚠ {{ error }}</p></div>
+<div class="loading" *ngIf="loading"><p>Loading usage data...</p></div>
+
+<!-- Summary Cards -->
+<div class="metrics-grid" *ngIf="!loading">
+  <div class="metric-card highlight">
+    <div class="metric-icon bg-yellow">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="black"><path d="M11 2L2 12H11V22L20 12H11V2Z"/></svg>
+    </div>
+    <div class="metric-info">
+      <h3 class="text-yellow">{{ totalKwh.toFixed(1) }}</h3>
+      <span>Total kWh Consumed</span>
+    </div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-icon bg-blue">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M12 2C12 2 5 11 5 15C5 18.866 8.134 22 12 22C15.866 22 19 18.866 19 15C19 11 12 2 12 2Z"/></svg>
+    </div>
+    <div class="metric-info">
+      <h3 class="text-blue">{{ totalLiters.toFixed(1) }}</h3>
+      <span>Total Liters Used</span>
+    </div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm0-4h-2V7h2v8z"/></svg>
+    </div>
+    <div class="metric-info">
+      <h3>₹{{ (totalEnergyCost + totalWaterCost).toFixed(0) }}</h3>
+      <span>Estimated Total Cost</span>
+    </div>
+  </div>
+</div>
+
+<!-- Charts Section -->
+<div class="charts-grid" *ngIf="!loading">
+  <!-- Energy Usage Bar Chart -->
+  <div class="card-panel chart-card">
+    <h2>⚡ Electricity Usage (kWh)</h2>
+    <div class="chart-container" *ngIf="energyData.length > 0; else noEnergy">
+      <div class="bar-chart">
+        <div class="bar-wrapper" *ngFor="let e of energyData">
+          <div class="bar energy-bar" [style.height.%]="getBarHeight(e.kwh_consumed, maxKwh)">
+            <span class="bar-value">{{ e.kwh_consumed }}</span>
+          </div>
+          <span class="bar-label">ID #{{ e.appliance_id }}</span>
+        </div>
+      </div>
+      <div class="chart-legend">
+        <span class="legend-dot energy"></span> kWh per appliance record
+      </div>
+    </div>
+    <ng-template #noEnergy><p class="empty-state">No energy usage data recorded yet.</p></ng-template>
+
+    <!-- Energy Data Table -->
+    <div class="table-responsive" *ngIf="energyData.length > 0" style="margin-top: 1.5rem;">
+      <table class="batman-table">
+        <thead>
+          <tr><th>Date</th><th>Appliance ID</th><th>kWh</th><th>Peak</th><th>Est. Cost</th></tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let e of energyData">
+            <td class="text-secondary">{{ e.date | date:'shortDate' }}</td>
+            <td>#{{ e.appliance_id }}</td>
+            <td class="font-medium text-yellow-inline">{{ e.kwh_consumed }}</td>
+            <td>{{ e.peak_usage }}</td>
+            <td>₹{{ e.cost_estimated.toFixed(2) }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Water Usage Bar Chart -->
+  <div class="card-panel chart-card">
+    <h2>💧 Water Usage (Liters)</h2>
+    <div class="chart-container" *ngIf="waterData.length > 0; else noWater">
+      <div class="bar-chart">
+        <div class="bar-wrapper" *ngFor="let w of waterData">
+          <div class="bar water-bar" [style.height.%]="getBarHeight(w.liters_consumed, maxLiters)">
+            <span class="bar-value">{{ w.liters_consumed }}</span>
+          </div>
+          <span class="bar-label">ID #{{ w.appliance_id }}</span>
+        </div>
+      </div>
+      <div class="chart-legend">
+        <span class="legend-dot water"></span> Liters per appliance record
+      </div>
+    </div>
+    <ng-template #noWater><p class="empty-state">No water usage data recorded yet.</p></ng-template>
+
+    <!-- Water Data Table -->
+    <div class="table-responsive" *ngIf="waterData.length > 0" style="margin-top: 1.5rem;">
+      <table class="batman-table">
+        <thead>
+          <tr><th>Date</th><th>Appliance ID</th><th>Liters</th><th>Cycles</th><th>Est. Cost</th></tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let w of waterData">
+            <td class="text-secondary">{{ w.date | date:'shortDate' }}</td>
+            <td>#{{ w.appliance_id }}</td>
+            <td class="font-medium text-blue-inline">{{ w.liters_consumed }}</td>
+            <td>{{ w.cycle_count }}</td>
+            <td>₹{{ w.cost_estimated.toFixed(2) }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
